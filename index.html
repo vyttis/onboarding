@@ -8,35 +8,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Skip to Content -->
     <a href="#main-content" class="skip-to-content">Pereiti prie turinio</a>
 
-    <!-- Mobile Navigation Toggle -->
-    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="hamburger"></span>
-    </button>
-
-    <!-- Mobile Language Switcher -->
-    <div class="lang-switcher-mobile" role="radiogroup" aria-label="Kalba / Language">
-        <button class="lang-btn active" data-lang="lt" aria-pressed="true">LT</button>
-        <span class="lang-separator" aria-hidden="true">|</span>
-        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-    </div>
+    <!-- Top Header Bar (hamburger + language switcher) -->
+    <header class="top-header" id="topHeader">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="hamburger"></span>
+        </button>
+        <div class="lang-switcher" role="radiogroup" aria-label="Kalba / Language">
+            <button class="lang-btn active" data-lang="lt" aria-pressed="true">LT</button>
+            <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+    </header>
 
     <!-- Side Navigation -->
     <nav class="side-nav" id="sideNav" aria-label="Pagrindinė navigacija">
         <div class="nav-header">
             <div class="nav-logo">
                 <img src="images/pozityvas.png" alt="Klaipėdos universitetas" class="nav-logo-img">
-            </div>
-            <div class="lang-switcher" role="radiogroup" aria-label="Kalba / Language">
-                <button class="lang-btn active" data-lang="lt" aria-pressed="true">LT</button>
-                <span class="lang-separator" aria-hidden="true">|</span>
-                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
             </div>
         </div>
         <ul class="nav-links">
@@ -74,11 +68,15 @@
                 <div class="hero-overlay"></div>
             </div>
             <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="images/pozityvas.png" alt="Klaipėdos universitetas" class="hero-logo-img">
+                <div class="hero-container">
+                    <div class="hero-logo">
+                        <img src="images/pozityvas.png" alt="Klaipėdos universitetas" class="hero-logo-img">
+                    </div>
+                    <h1 data-lang-content="lt">Darbuotojo<br>atmintinė</h1>
+                    <h1 data-lang-content="en">Employee<br>Handbook</h1>
+                    <p class="hero-subtitle" data-lang-content="lt">Viskas, ką reikia žinoti pradedant darbą Klaipėdos universitete</p>
+                    <p class="hero-subtitle" data-lang-content="en">Everything you need to know when starting at Klaipėda University</p>
                 </div>
-                <h1 data-lang-content="lt">Darbuotojo<br>atmintinė</h1>
-                <h1 data-lang-content="en">Employee<br>Handbook</h1>
             </div>
         </section>
 
