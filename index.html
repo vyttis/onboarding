@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darbuotojo atmintinė | Klaipėdos universitetas</title>
-    <link rel="icon" type="image/png" href="images/KU logotipas favicon.png">
+    <link rel="icon" type="image/png" href="images/ku-logotipas-favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,16 +12,31 @@
 </head>
 <body>
 
+    <!-- Skip to Content -->
+    <a href="#main-content" class="skip-to-content">Pereiti prie turinio</a>
+
     <!-- Mobile Navigation Toggle -->
     <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
     </button>
 
+    <!-- Mobile Language Switcher -->
+    <div class="lang-switcher-mobile" role="radiogroup" aria-label="Kalba / Language">
+        <button class="lang-btn active" data-lang="lt" aria-pressed="true">LT</button>
+        <span class="lang-separator" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+
     <!-- Side Navigation -->
-    <nav class="side-nav" id="sideNav">
+    <nav class="side-nav" id="sideNav" aria-label="Pagrindinė navigacija">
         <div class="nav-header">
             <div class="nav-logo">
                 <img src="images/pozityvas.png" alt="Klaipėdos universitetas" class="nav-logo-img">
+            </div>
+            <div class="lang-switcher" role="radiogroup" aria-label="Kalba / Language">
+                <button class="lang-btn active" data-lang="lt" aria-pressed="true">LT</button>
+                <span class="lang-separator" aria-hidden="true">|</span>
+                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
             </div>
         </div>
         <ul class="nav-links">
@@ -48,7 +63,7 @@
     <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content" id="main-content">
 
         <!-- Hero Section -->
         <section class="hero" id="hero">
@@ -62,7 +77,8 @@
                 <div class="hero-logo">
                     <img src="images/pozityvas.png" alt="Klaipėdos universitetas" class="hero-logo-img">
                 </div>
-                <h1>Darbuotojo<br>atmintinė</h1>
+                <h1 data-lang-content="lt">Darbuotojo<br>atmintinė</h1>
+                <h1 data-lang-content="en">Employee<br>Handbook</h1>
             </div>
         </section>
 
@@ -82,21 +98,21 @@
                             <h3>Norėdami geriau pažinti universitetą, jo istoriją rasite</h3>
                             <span class="link-url">www.ku.lt/lt/universitetas/apie-universiteta</span>
                         </div>
-                        <a href="https://www.ku.lt/lt/universitetas/apie-universiteta" class="btn-pill" target="_blank" rel="noopener">ČIA</a>
+                        <a href="https://www.ku.lt/lt/universitetas/apie-universiteta" class="btn-pill" target="_blank" rel="noopener noreferrer">ČIA</a>
                     </div>
                     <div class="link-card">
                         <div>
                             <h3>Misiją ir vertybes rasite</h3>
                             <span class="link-url">www.ku.lt/lt/universitetas/apie-universiteta</span>
                         </div>
-                        <a href="https://www.ku.lt/lt/universitetas/apie-universiteta" class="btn-pill" target="_blank" rel="noopener">ČIA</a>
+                        <a href="https://www.ku.lt/lt/universitetas/apie-universiteta" class="btn-pill" target="_blank" rel="noopener noreferrer">ČIA</a>
                     </div>
                     <div class="link-card">
                         <div>
                             <h3>Universiteto simboliką rasite</h3>
                             <span class="link-url">www.ku.lt/lt/apie/universiteto-stilius</span>
                         </div>
-                        <a href="https://www.ku.lt/lt/apie/universiteto-stilius" class="btn-pill" target="_blank" rel="noopener">ČIA</a>
+                        <a href="https://www.ku.lt/lt/apie/universiteto-stilius" class="btn-pill" target="_blank" rel="noopener noreferrer">ČIA</a>
                     </div>
                 </div>
             </div>
@@ -185,28 +201,28 @@
                 <div class="checklist-box">
                     <h3 class="checklist-title">PASITIKRINKIME:</h3>
                     <ul class="checklist">
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar pasirašėte darbo sutartį?
                         </li>
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar deklaravote privačius interesus (aktualu vadovų pareigybėms per 30 kalendorinių dienų)?
                         </li>
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar susipažinote su savo pareigybės aprašymu, padalinio nuostatais?
                         </li>
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar susipažinote su kolegomis?
                         </li>
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar įsikūrėte darbo vietoje?
                         </li>
-                        <li class="checklist-item">
-                            <span class="checkbox"></span>
+                        <li class="checklist-item" role="checkbox" aria-checked="false" tabindex="0">
+                            <span class="checkbox" aria-hidden="true"></span>
                             Ar susipažinote su darbo aplinka ir darbo priemonėmis?
                         </li>
                     </ul>
@@ -220,229 +236,274 @@
                 <h2 class="section-title">Prisijungimas prie universiteto informacinių sistemų</h2>
 
                 <!-- Unified Account -->
-                <div class="info-block">
-                    <h3>Vieninga paskyra</h3>
-                    <p>Sudarę darbo sutartį, Jūs gaunate prieigą prie Klaipėdos universiteto elektroninių paslaugų. Prisijungimas vyksta vieningos paskyros principu &ndash; naudodamiesi viena paskyra galėsite pasiekti įvairias universiteto informacines sistemas.</p>
-                    <p>Prisijungimo vardas sudaromas iš Jūsų vardo ir pavardės, atskirtų tašku. Naudojamos mažosios raidės, o lietuviškos raidės keičiamos lotyniškomis.</p>
-                    <div class="example-box">
-                        <strong>Pavyzdžiui:</strong><br>
-                        Vardenis Pavardenis &rarr; <code>vardenis.pavardenis</code><br>
-                        Vardė Pavardė &rarr; <code>varde.pavarde</code>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Vieninga paskyra
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Sudarę darbo sutartį, Jūs gaunate prieigą prie Klaipėdos universiteto elektroninių paslaugų. Prisijungimas vyksta vieningos paskyros principu &ndash; naudodamiesi viena paskyra galėsite pasiekti įvairias universiteto informacines sistemas.</p>
+                        <p>Prisijungimo vardas sudaromas iš Jūsų vardo ir pavardės, atskirtų tašku. Naudojamos mažosios raidės, o lietuviškos raidės keičiamos lotyniškomis.</p>
+                        <div class="example-box">
+                            <strong>Pavyzdžiui:</strong><br>
+                            Vardenis Pavardenis &rarr; <code>vardenis.pavardenis</code><br>
+                            Vardė Pavardė &rarr; <code>varde.pavarde</code>
+                        </div>
                     </div>
-                </div>
+                </details>
 
                 <!-- First Login -->
-                <div class="info-block">
-                    <h3>Pirmasis prisijungimas (jei neturite slaptažodžio)</h3>
-                    <ol class="steps-list">
-                        <li>Prisijunkite prie el. paslaugų portalo MANO KU: <a href="https://intranet.ku.lt" class="link" target="_blank" rel="noopener">https://intranet.ku.lt</a></li>
-                        <li>Paspauskite nuorodą &bdquo;Pamiršai slaptažodį?&ldquo;.</li>
-                        <li>Įveskite savo KU el. pašto adresą (<code>vardas.pavarde@ku.lt</code>) ir spauskite &bdquo;Priminti&ldquo;.</li>
-                        <li>Į darbo sutartyje nurodytą el. pašto adresą gausite laišką su nuoroda slaptažodžiui sukurti.</li>
-                        <li>Atsidariusiame lange du kartus įveskite naują slaptažodį ir paspauskite &bdquo;Keisti slaptažodį&ldquo;.</li>
-                        <li>Baigę veiksmus, paspauskite &bdquo;Atsijungti&ldquo;.</li>
-                    </ol>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Pirmasis prisijungimas (jei neturite slaptažodžio)
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <ol class="steps-list">
+                            <li>Prisijunkite prie el. paslaugų portalo MANO KU: <a href="https://intranet.ku.lt" class="link" target="_blank" rel="noopener noreferrer">https://intranet.ku.lt</a></li>
+                            <li>Paspauskite nuorodą &bdquo;Pamiršai slaptažodį?&ldquo;.</li>
+                            <li>Įveskite savo KU el. pašto adresą (<code>vardas.pavarde@ku.lt</code>) ir spauskite &bdquo;Priminti&ldquo;.</li>
+                            <li>Į darbo sutartyje nurodytą el. pašto adresą gausite laišką su nuoroda slaptažodžiui sukurti.</li>
+                            <li>Atsidariusiame lange du kartus įveskite naują slaptažodį ir paspauskite &bdquo;Keisti slaptažodį&ldquo;.</li>
+                            <li>Baigę veiksmus, paspauskite &bdquo;Atsijungti&ldquo;.</li>
+                        </ol>
 
-                    <div class="warning-box">
-                        <strong>Dėmesio:</strong>
-                        <ul>
-                            <li>Slaptažodyje nenaudokite specialiųjų simbolių (pvz., +, &amp; ir pan.);</li>
-                            <li>Slaptažodis negali būti sudarytas vien tik iš skaitmenų.</li>
-                        </ul>
+                        <div class="warning-box">
+                            <strong>Dėmesio:</strong>
+                            <ul>
+                                <li>Slaptažodyje nenaudokite specialiųjų simbolių (pvz., +, &amp; ir pan.);</li>
+                                <li>Slaptažodis negali būti sudarytas vien tik iš skaitmenų.</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                </details>
 
                 <!-- Forgot Password -->
-                <div class="info-block">
-                    <h3>Jei pamiršote slaptažodį</h3>
-                    <p>Slaptažodį bet kada galite atkurti portale MANO KU (<a href="https://intranet.ku.lt" class="link" target="_blank" rel="noopener">https://intranet.ku.lt</a>), paspaudę &bdquo;Pamiršai slaptažodį?&ldquo;, užpildę reikiamus laukelius ir pasirinkę &bdquo;Atstatyti slaptažodį&ldquo;.</p>
-                    <p>Sėkmingą operaciją patvirtins žalias pranešimas. Po to pasirinkite &bdquo;Atsijungti&ldquo;.</p>
-                    <p>Atkreipiame dėmesį, kad pakeistas slaptažodis elektroniniam paštui, MS Teams ir kitoms &bdquo;Office 365&ldquo; paslaugoms pradės galioti per 30 minučių.</p>
-                    <p class="help-note">Jei kyla elektroninių paslaugų sutrikimų ar kitų IT klausimų, prašome kreiptis el. paštu: <a href="mailto:pagalba@ku.lt" class="link">pagalba@ku.lt</a></p>
-                </div>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Jei pamiršote slaptažodį
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Slaptažodį bet kada galite atkurti portale MANO KU (<a href="https://intranet.ku.lt" class="link" target="_blank" rel="noopener noreferrer">https://intranet.ku.lt</a>), paspaudę &bdquo;Pamiršai slaptažodį?&ldquo;, užpildę reikiamus laukelius ir pasirinkę &bdquo;Atstatyti slaptažodį&ldquo;.</p>
+                        <p>Sėkmingą operaciją patvirtins žalias pranešimas. Po to pasirinkite &bdquo;Atsijungti&ldquo;.</p>
+                        <p>Atkreipiame dėmesį, kad pakeistas slaptažodis elektroniniam paštui, MS Teams ir kitoms &bdquo;Office 365&ldquo; paslaugoms pradės galioti per 30 minučių.</p>
+                        <p class="help-note">Jei kyla elektroninių paslaugų sutrikimų ar kitų IT klausimų, prašome kreiptis el. paštu: <a href="mailto:pagalba@ku.lt" class="link">pagalba@ku.lt</a></p>
+                    </div>
+                </details>
 
                 <!-- WiFi -->
-                <div class="info-block">
-                    <h3>Bevielis interneto ryšys</h3>
-                    <p>Universiteto teritorijoje veikia nemokamas belaidis interneto ryšys. Norėdami juo naudotis, bevielių tinklų sąraše pasirinkite &bdquo;Eduroam&ldquo; ir prisijunkite naudodami vieningos paskyros duomenis.</p>
-                    <p>Prisijungiant naudokite savo universiteto el. pašto adresą: <code>vardas.pavarde@ku.lt</code></p>
-                    <div class="btn-row">
-                        <a href="https://eduroam.lt" class="btn-outline" target="_blank" rel="noopener">https://eduroam.lt</a>
-                        <a href="https://eduroam.org" class="btn-outline" target="_blank" rel="noopener">https://eduroam.org</a>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Bevielis interneto ryšys
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Universiteto teritorijoje veikia nemokamas belaidis interneto ryšys. Norėdami juo naudotis, bevielių tinklų sąraše pasirinkite &bdquo;Eduroam&ldquo; ir prisijunkite naudodami vieningos paskyros duomenis.</p>
+                        <p>Prisijungiant naudokite savo universiteto el. pašto adresą: <code>vardas.pavarde@ku.lt</code></p>
+                        <div class="btn-row">
+                            <a href="https://eduroam.lt" class="btn-outline" target="_blank" rel="noopener noreferrer">https://eduroam.lt</a>
+                            <a href="https://eduroam.org" class="btn-outline" target="_blank" rel="noopener noreferrer">https://eduroam.org</a>
+                        </div>
                     </div>
-                </div>
+                </details>
 
                 <!-- AIS -->
-                <div class="info-block">
-                    <h3>Akademinė informacijos sistema (AIS)</h3>
-                    <p>Jeigu jūsų pareigybės funkcijoms vykdyti reikalinga prieiga prie Akademinės informacijos sistemos (AIS) (<a href="https://web.liemsis.lt/kuis/stp_prisijungimas" class="link" target="_blank" rel="noopener">https://web.liemsis.lt/kuis/stp_prisijungimas</a>), prašome kreiptis į</p>
-                    <div class="contact-card">
-                        <div class="contact-name">Laima Vilbutienė</div>
-                        <div class="contact-role">Studijų tarnybos vyriausioji specialistė</div>
-                        <div class="contact-details">
-                            <div><span class="contact-label">telefono nr.:</span> (0 46) 39 89 96</div>
-                            <div><span class="contact-label">trumpas nr.:</span> 1996</div>
-                            <div><span class="contact-label">el. paštas:</span> <a href="mailto:laima.vilbutiene@ku.lt" class="link">laima.vilbutiene@ku.lt</a></div>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Akademinė informacijos sistema (AIS)
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Jeigu jūsų pareigybės funkcijoms vykdyti reikalinga prieiga prie Akademinės informacijos sistemos (AIS) (<a href="https://web.liemsis.lt/kuis/stp_prisijungimas" class="link" target="_blank" rel="noopener noreferrer">https://web.liemsis.lt/kuis/stp_prisijungimas</a>), prašome kreiptis į</p>
+                        <div class="contact-card">
+                            <div class="contact-name">Laima Vilbutienė</div>
+                            <div class="contact-role">Studijų tarnybos vyriausioji specialistė</div>
+                            <div class="contact-details">
+                                <div><span class="contact-label">telefono nr.:</span> (0 46) 39 89 96</div>
+                                <div><span class="contact-label">trumpas nr.:</span> 1996</div>
+                                <div><span class="contact-label">el. paštas:</span> <a href="mailto:laima.vilbutiene@ku.lt" class="link">laima.vilbutiene@ku.lt</a></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </details>
 
                 <!-- Email -->
-                <div class="info-block">
-                    <h3>Elektroninis paštas</h3>
-                    <p>Prie savo asmeninės Klaipėdos universiteto elektroninio pašto dėžutės galite prisijungti per &bdquo;Office 365&ldquo; paslaugų portalą:</p>
-                    <div class="btn-row">
-                        <a href="https://www.office.com/" class="btn-outline" target="_blank" rel="noopener">https://www.office.com/</a>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Elektroninis paštas
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Prie savo asmeninės Klaipėdos universiteto elektroninio pašto dėžutės galite prisijungti per &bdquo;Office 365&ldquo; paslaugų portalą:</p>
+                        <div class="btn-row">
+                            <a href="https://www.office.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">https://www.office.com/</a>
+                        </div>
+                        <p>Prisijungdami naudokite vieningą paskyrą: <code>vardas.pavarde@ku.lt</code><br>
+                        Prisijungę portale, pasirinkite ir paleiskite &bdquo;Outlook&ldquo; programą:</p>
+                        <div class="btn-row">
+                            <a href="https://outlook.office.com/" class="btn-outline" target="_blank" rel="noopener noreferrer">https://outlook.office.com/</a>
+                        </div>
+                        <h4>Elektroninis paštas telefone:</h4>
+                        <div class="btn-row">
+                            <a href="https://play.google.com/store/search?q=outlook&c=apps" class="btn-outline" target="_blank" rel="noopener noreferrer">Android</a>
+                            <a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596" class="btn-outline" target="_blank" rel="noopener noreferrer">iOS</a>
+                        </div>
                     </div>
-                    <p>Prisijungdami naudokite vieningą paskyrą: <code>vardas.pavarde@ku.lt</code><br>
-                    Prisijungę portale, pasirinkite ir paleiskite &bdquo;Outlook&ldquo; programą:</p>
-                    <div class="btn-row">
-                        <a href="https://outlook.office.com/" class="btn-outline" target="_blank" rel="noopener">https://outlook.office.com/</a>
-                    </div>
-                    <h4>Elektroninis paštas telefone:</h4>
-                    <div class="btn-row">
-                        <a href="https://play.google.com/store/search?q=outlook&c=apps" class="btn-outline" target="_blank" rel="noopener">Android</a>
-                        <a href="https://apps.apple.com/us/app/microsoft-outlook/id951937596" class="btn-outline" target="_blank" rel="noopener">iOS</a>
-                    </div>
-                </div>
+                </details>
 
                 <!-- DVS -->
-                <div class="info-block">
-                    <div class="photo-placeholder">
-                        <!-- Placeholder for building photo -->
-                        <span>KU pastato nuotrauka</span>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Dokumentų valdymo sistema (DVS)
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="photo-placeholder">
+                            <!-- Placeholder for building photo -->
+                            <span>KU pastato nuotrauka</span>
+                        </div>
+                        <p>Dokumentų valdymo sistema (DVS) yra pasiekiama tik iš Klaipėdos universiteto darbo vietos, prisijungus prie KU tinklo. Norėdami dirbti su DVS nuotoliniu būdu (pvz., iš namų), turite naudotis KU VPN paslauga.</p>
+                        <div class="btn-row">
+                            <span class="btn-outline">KU VPN konfigūracija</span>
+                        </div>
+                        <p>Prie DVS galite prisijungti šiais adresais:</p>
+                        <div class="btn-row">
+                            <span class="btn-outline">http://dvs.ku.local/DocLogix/</span>
+                            <span class="label-or">arba</span>
+                            <span class="btn-outline">http://192.168.38.1/DocLogix/</span>
+                        </div>
+                        <p>Su DVS galimybėmis ir pagalbos informacija kviečiame susipažinti čia: <a href="#" class="link">DVS galimybės ir pagalba</a></p>
                     </div>
-                    <h3>Dokumentų valdymo sistema (DVS)</h3>
-                    <p>Dokumentų valdymo sistema (DVS) yra pasiekiama tik iš Klaipėdos universiteto darbo vietos, prisijungus prie KU tinklo. Norėdami dirbti su DVS nuotoliniu būdu (pvz., iš namų), turite naudotis KU VPN paslauga.</p>
-                    <div class="btn-row">
-                        <span class="btn-outline">KU VPN konfigūracija</span>
-                    </div>
-                    <p>Prie DVS galite prisijungti šiais adresais:</p>
-                    <div class="btn-row">
-                        <span class="btn-outline">http://dvs.ku.local/DocLogix/</span>
-                        <span class="label-or">arba</span>
-                        <span class="btn-outline">http://192.168.38.1/DocLogix/</span>
-                    </div>
-                    <p>Su DVS galimybėmis ir pagalbos informacija kviečiame susipažinti čia: <a href="#" class="link">DVS galimybės ir pagalba</a></p>
-                </div>
+                </details>
 
                 <!-- Other e-services -->
-                <div class="info-block">
-                    <h3>Kitos elektroninės paslaugos</h3>
-                    <p>Naudodamiesi vieningos paskyros duomenimis, Jūs galite prisijungti prie šių Klaipėdos universiteto elektroninių paslaugų:</p>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        Kitos elektroninės paslaugos
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Naudodamiesi vieningos paskyros duomenimis, Jūs galite prisijungti prie šių Klaipėdos universiteto elektroninių paslaugų:</p>
 
-                    <div class="service-list">
-                        <div class="service-item">
-                            <div class="service-header">
-                                <h4>Office365 paslaugos</h4>
-                                <a href="https://www.office.com/" class="btn-outline small" target="_blank" rel="noopener">https://www.office.com/</a>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h4>Office365 paslaugos</h4>
+                                    <a href="https://www.office.com/" class="btn-outline small" target="_blank" rel="noopener noreferrer">https://www.office.com/</a>
+                                </div>
+                                <p>(MS Office, MS Teams, MS OneDrive ir kt.)<br>
+                                Prisijungimui naudokite: <code>vardas.pavarde@ku.lt</code><br>
+                                Kaip naudotis &bdquo;OneDrive&ldquo;: <a href="https://youtu.be/ZA5bsQmeabs" class="link" target="_blank" rel="noopener noreferrer">https://youtu.be/ZA5bsQmeabs</a></p>
                             </div>
-                            <p>(MS Office, MS Teams, MS OneDrive ir kt.)<br>
-                            Prisijungimui naudokite: <code>vardas.pavarde@ku.lt</code><br>
-                            Kaip naudotis &bdquo;OneDrive&ldquo;: <a href="https://youtu.be/ZA5bsQmeabs" class="link" target="_blank" rel="noopener">https://youtu.be/ZA5bsQmeabs</a></p>
-                        </div>
 
-                        <div class="service-item">
-                            <div class="service-header">
-                                <h4>Virtuali mokymosi aplinka (KU VMA)</h4>
-                                <a href="http://vma.ku.lt/" class="btn-outline small" target="_blank" rel="noopener">http://vma.ku.lt/</a>
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h4>Virtuali mokymosi aplinka (KU VMA)</h4>
+                                    <a href="http://vma.ku.lt/" class="btn-outline small" target="_blank" rel="noopener noreferrer">http://vma.ku.lt/</a>
+                                </div>
+                                <p>Prisijungimui naudokite vieningos paskyros vardą (pvz., <code>vardas.pavarde</code>).</p>
                             </div>
-                            <p>Prisijungimui naudokite vieningos paskyros vardą (pvz., <code>vardas.pavarde</code>).</p>
-                        </div>
 
-                        <div class="service-item">
-                            <div class="service-header">
-                                <h4>Tvarkaraščiai</h4>
-                                <a href="https://tvarkarasciai.ku.lt/login" class="btn-outline small" target="_blank" rel="noopener">https://tvarkarasciai.ku.lt/login</a>
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h4>Tvarkaraščiai</h4>
+                                    <a href="https://tvarkarasciai.ku.lt/login" class="btn-outline small" target="_blank" rel="noopener noreferrer">https://tvarkarasciai.ku.lt/login</a>
+                                </div>
+                                <p>Prisijungimui naudokite: <code>vardas.pavarde@ku.lt</code></p>
                             </div>
-                            <p>Prisijungimui naudokite: <code>vardas.pavarde@ku.lt</code></p>
-                        </div>
 
-                        <div class="service-item">
-                            <div class="service-header">
-                                <h4>Personalo sistema</h4>
-                                <span class="btn-outline small">https://personalas.ku.local/darbuotojas/</span>
+                            <div class="service-item">
+                                <div class="service-header">
+                                    <h4>Personalo sistema</h4>
+                                    <span class="btn-outline small">https://personalas.ku.local/darbuotojas/</span>
+                                </div>
+                                <p>Prisijungimui naudokite vieningos paskyros duomenis (<code>vardas.pavarde</code>).</p>
                             </div>
-                            <p>Prisijungimui naudokite vieningos paskyros duomenis (<code>vardas.pavarde</code>).</p>
-                        </div>
 
-                        <div class="service-item">
-                            <h4>KU bibliotekos informacijos ištekliai</h4>
-                            <div class="btn-row">
-                                <a href="https://biblioteka.ku.lt/" class="btn-outline small" target="_blank" rel="noopener">KU biblioteka</a>
-                                <a href="https://vb.ku.lt" class="btn-outline small" target="_blank" rel="noopener">KU virtuali biblioteka</a>
+                            <div class="service-item">
+                                <h4>KU bibliotekos informacijos ištekliai</h4>
+                                <div class="btn-row">
+                                    <a href="https://biblioteka.ku.lt/" class="btn-outline small" target="_blank" rel="noopener noreferrer">KU biblioteka</a>
+                                    <a href="https://vb.ku.lt" class="btn-outline small" target="_blank" rel="noopener noreferrer">KU virtuali biblioteka</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </details>
 
                 <!-- IT Specialists -->
-                <div class="info-block">
-                    <h3>IT specialistai pagal padalinius</h3>
-                    <p>Jei kyla klausimų ar sutrikimų, galite kreiptis į Jūsų padaliniui priskirtą IT specialistą:</p>
+                <details class="accordion-block" open>
+                    <summary class="accordion-title">
+                        IT specialistai pagal padalinius
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Jei kyla klausimų ar sutrikimų, galite kreiptis į Jūsų padaliniui priskirtą IT specialistą:</p>
 
-                    <div class="it-contacts">
-                        <div class="it-contact-group">
-                            <div class="it-department">Sveikatos mokslų fakultetas</div>
-                            <div class="contact-card compact">
-                                <div class="contact-name">Dainius Aponkus</div>
-                                <div class="contact-details">
-                                    <div><span class="contact-label">T.:</span> (0 46) 39 85 66</div>
-                                    <div><span class="contact-label">E.:</span> <a href="mailto:dainius.aponkus@ku.lt" class="link">dainius.aponkus@ku.lt</a></div>
+                        <div class="it-contacts">
+                            <div class="it-contact-group">
+                                <div class="it-department">Sveikatos mokslų fakultetas</div>
+                                <div class="contact-card compact">
+                                    <div class="contact-name">Dainius Aponkus</div>
+                                    <div class="contact-details">
+                                        <div><span class="contact-label">T.:</span> (0 46) 39 85 66</div>
+                                        <div><span class="contact-label">E.:</span> <a href="mailto:dainius.aponkus@ku.lt" class="link">dainius.aponkus@ku.lt</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="it-contact-group">
+                                <div class="it-department">Socialinių ir humanitarinių mokslų fakultetas</div>
+                                <div class="contact-card compact">
+                                    <div class="contact-name">Paulius Slavinskas</div>
+                                    <div class="contact-details">
+                                        <div><span class="contact-label">T.:</span> (0 46) 39 86 44</div>
+                                        <div><span class="contact-label">E.:</span> <a href="mailto:paulius.slavinskas@ku.lt" class="link">paulius.slavinskas@ku.lt</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="it-contact-group">
+                                <div class="it-department">Jūros technologijų ir gamtos mokslų fakultetas</div>
+                                <div class="contact-card compact">
+                                    <div class="contact-name">Mindaugas Stripeikaitis</div>
+                                    <div class="contact-details">
+                                        <div><span class="contact-label">T.:</span> (0 46) 39 86 98</div>
+                                        <div><span class="contact-label">E.:</span> <a href="mailto:mindaugas.stripeikaitis@ku.lt" class="link">mindaugas.stripeikaitis@ku.lt</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="it-contact-group">
+                                <div class="it-department">Jūros tyrimų institutas</div>
+                                <div class="contact-card compact">
+                                    <div class="contact-name">Aleksas Narščius</div>
+                                    <div class="contact-details">
+                                        <div><span class="contact-label">T.:</span> (0 46) 39 88 56</div>
+                                        <div><span class="contact-label">E.:</span> <a href="mailto:aleksas.narscius@ku.lt" class="link">aleksas.narscius@ku.lt</a></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="it-contact-group">
+                                <div class="it-department">Kiti padaliniai</div>
+                                <div class="contact-card compact">
+                                    <div class="contact-name">Edmundas Gricius</div>
+                                    <div class="contact-details">
+                                        <div><span class="contact-label">T.:</span> (0 46) 39 88 89</div>
+                                        <div><span class="contact-label">E.:</span> <a href="mailto:edmundas.gricius@ku.lt" class="link">edmundas.gricius@ku.lt</a></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="it-contact-group">
-                            <div class="it-department">Socialinių ir humanitarinių mokslų fakultetas</div>
-                            <div class="contact-card compact">
-                                <div class="contact-name">Paulius Slavinskas</div>
-                                <div class="contact-details">
-                                    <div><span class="contact-label">T.:</span> (0 46) 39 86 44</div>
-                                    <div><span class="contact-label">E.:</span> <a href="mailto:paulius.slavinskas@ku.lt" class="link">paulius.slavinskas@ku.lt</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="it-contact-group">
-                            <div class="it-department">Jūros technologijų ir gamtos mokslų fakultetas</div>
-                            <div class="contact-card compact">
-                                <div class="contact-name">Mindaugas Stripeikaitis</div>
-                                <div class="contact-details">
-                                    <div><span class="contact-label">T.:</span> (0 46) 39 86 98</div>
-                                    <div><span class="contact-label">E.:</span> <a href="mailto:mindaugas.stripeikaitis@ku.lt" class="link">mindaugas.stripeikaitis@ku.lt</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="it-contact-group">
-                            <div class="it-department">Jūros tyrimų institutas</div>
-                            <div class="contact-card compact">
-                                <div class="contact-name">Aleksas Narščius</div>
-                                <div class="contact-details">
-                                    <div><span class="contact-label">T.:</span> (0 46) 39 88 56</div>
-                                    <div><span class="contact-label">E.:</span> <a href="mailto:aleksas.narscius@ku.lt" class="link">aleksas.narscius@ku.lt</a></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="it-contact-group">
-                            <div class="it-department">Kiti padaliniai</div>
-                            <div class="contact-card compact">
-                                <div class="contact-name">Edmundas Gricius</div>
-                                <div class="contact-details">
-                                    <div><span class="contact-label">T.:</span> (0 46) 39 88 89</div>
-                                    <div><span class="contact-label">E.:</span> <a href="mailto:edmundas.gricius@ku.lt" class="link">edmundas.gricius@ku.lt</a></div>
-                                </div>
-                            </div>
+                        <p class="note-text">Jei nerandate savo padalinio IT specialisto, kreipkitės į Mindaugą Stripeikaitį (kontaktai nurodyti aukščiau).</p>
+                        <div class="warning-box">
+                            <strong>Svarbu:</strong> esant elektroninių paslaugų sutrikimams ar kitais IT klausimais, taip pat galite kreiptis bendruoju el. pašto adresu: <a href="mailto:pagalba@ku.lt" class="link">pagalba@ku.lt</a>
                         </div>
                     </div>
-
-                    <p class="note-text">Jei nerandate savo padalinio IT specialisto, kreipkitės į Mindaugą Stripeikaitį (kontaktai nurodyti aukščiau).</p>
-                    <div class="warning-box">
-                        <strong>Svarbu:</strong> esant elektroninių paslaugų sutrikimams ar kitais IT klausimais, taip pat galite kreiptis bendruoju el. pašto adresu: <a href="mailto:pagalba@ku.lt" class="link">pagalba@ku.lt</a>
-                    </div>
-                </div>
+                </details>
             </div>
         </section>
 
@@ -451,7 +512,9 @@
             <div class="container">
                 <h2 class="section-title">Svarbiausieji universiteto dokumentai</h2>
 
-                <p>Su pagrindiniais Klaipėdos universiteto dokumentais susipažinkite nedelsdami, bet ne vėliau kaip per 5 darbo dienas nuo darbo pradžios. Dokumentus rasite DVS sistemoje, prie kurios prisijungsite naudodamiesi vieninga paskyra.</p>
+                <div class="action-highlight">
+                    <p>Su pagrindiniais Klaipėdos universiteto dokumentais susipažinkite <strong>nedelsdami, bet ne vėliau kaip per 5 darbo dienas</strong> nuo darbo pradžios. Dokumentus rasite DVS sistemoje, prie kurios prisijungsite naudodamiesi vieninga paskyra.</p>
+                </div>
 
                 <div class="dvs-path">
                     <span class="path-step">http://dvs.ku.local/ Pagrindinis puslapis</span>
@@ -529,7 +592,9 @@
                 <p>Klaipėdos universiteto darbuotojams sudaromos galimybės kelti bendrąsias ir specialiąsias kompetencijas, atsižvelgiant į padalinio poreikius ir Jūsų atliekamas funkcijas.</p>
                 <p>Informacija apie vidinius mokymus, taip pat kvietimai dalyvauti seminaruose ir konferencijose skelbiami KU intranete ir naujienlaiškiuose.</p>
                 <p>KU darbuotojai taip pat turi galimybę stažuotis užsienyje pagal &bdquo;Erasmus+&ldquo; programą. Dėl šios galimybės kviečiame kreiptis į Tarptautinių ryšių tarnybą, tel. <a href="tel:+37046398952" class="link">(0 46) 39 89 52</a>.</p>
-                <p>Jei planuojate dalyvauti kvalifikacijos kėlimo renginyje, ne vėliau kaip prieš 5 darbo dienas užpildykite komandiruotės prašymą DVS sistemoje ir pasitikrinkite, ar Jūsų prašymas yra patvirtintas.</p>
+                <div class="action-highlight">
+                    <p>Jei planuojate dalyvauti kvalifikacijos kėlimo renginyje, <strong>ne vėliau kaip prieš 5 darbo dienas</strong> užpildykite komandiruotės prašymą DVS sistemoje ir pasitikrinkite, ar Jūsų prašymas yra patvirtintas.</p>
+                </div>
             </div>
         </section>
 
@@ -537,7 +602,9 @@
         <section class="section section-light" id="komandiruotes">
             <div class="container">
                 <h2 class="section-title">Komandiruotės</h2>
-                <p>Norėdami vykti į komandiruotę Lietuvoje ar užsienyje, prašymą pateikite per DVS sistemą. Pateikę prašymą, nepamirškite pasitikrinti, ar jis buvo patvirtintas.</p>
+                <div class="action-highlight">
+                    <p>Norėdami vykti į komandiruotę Lietuvoje ar užsienyje, prašymą <strong>pateikite per DVS sistemą</strong>. Pateikę prašymą, nepamirškite pasitikrinti, ar jis buvo patvirtintas.</p>
+                </div>
                 <p>Kilus klausimams dėl komandiruočių, prašome kreiptis:</p>
                 <ul class="contact-list-inline">
                     <li>dėl komandiruotės organizavimo &ndash; tel. <a href="tel:+37046398916" class="link">(0 46) 39 89 16</a>;</li>
@@ -554,7 +621,9 @@
                 <div class="highlight-box">
                     Atkreipiame dėmesį, kad viena iš kasmetinių atostogų dalių negali būti trumpesnė nei <strong>10 darbo dienų</strong>.
                 </div>
-                <p>Prašymus dėl kasmetinių ir kitų rūšių atostogų suteikimo teikite per DVS sistemą, kur taip pat galite pasitikrinti nepanaudotų atostogų likutį.</p>
+                <div class="action-highlight">
+                    <p>Prašymus dėl kasmetinių ir kitų rūšių atostogų suteikimo <strong>teikite per DVS sistemą</strong>, kur taip pat galite pasitikrinti nepanaudotų atostogų likutį.</p>
+                </div>
                 <p>Be kasmetinių atostogų, Jūs galite pasinaudoti <strong>2* papildomomis darbo dienomis sveikatai gerinti</strong>. Šios dienos nėra pridedamos prie kasmetinių atostogų ir turi būti panaudotos per vienus kalendorinius metus (*ši sąlyga taikoma ne profesinės sąjungos nariams).</p>
                 <p class="note-text">Pateikę prašymą, nepamirškite pasitikrinti, ar jis buvo patvirtintas.</p>
             </div>
@@ -564,7 +633,9 @@
         <section class="section section-light" id="nedarbingumas">
             <div class="container">
                 <h2 class="section-title">Nedarbingumas</h2>
-                <p>Susirgę ar patekę į gydymo įstaigą, nedelsdami (kai tik turėsite galimybę) informuokite savo tiesioginį vadovą telefonu arba elektroniniu paštu.</p>
+                <div class="action-highlight">
+                    <p>Susirgę ar patekę į gydymo įstaigą, <strong>nedelsdami</strong> (kai tik turėsite galimybę) informuokite savo tiesioginį vadovą telefonu arba elektroniniu paštu.</p>
+                </div>
                 <p>Jei nelaimingas atsitikimas įvyko pakeliui į darbą arba iš darbo, nedelsdami (kai tik turėsite galimybę) apie tai praneškite savo tiesioginiam vadovui telefonu arba elektroniniu paštu ir papildomai informuokite darbuotojų saugos ir sveikatos vyresnįjį specialistą tel. <a href="tel:+37046398946" class="link">+370 46 398 946</a> arba el. paštu <a href="mailto:rytis.smalinskas@ku.lt" class="link">rytis.smalinskas@ku.lt</a>.</p>
             </div>
         </section>
@@ -645,7 +716,7 @@
                 <p>Atliekant darbo funkcijas ir prireikus pasinaudoti universiteto transportu, prašymą teikite Infrastruktūros valdymo ir investicijų skyriui.</p>
                 <p>Infrastruktūros valdymo ir investicijų skyriaus valdomas tarnybinis automobilis su vairuotoju skiriamas, užpildžius detalią informaciją autotransporto tvarkaraštyje:</p>
                 <div class="btn-row">
-                    <a href="https://tvarkarasciai.ku.lt/resources" class="btn-outline" target="_blank" rel="noopener">https://tvarkarasciai.ku.lt/resources</a>
+                    <a href="https://tvarkarasciai.ku.lt/resources" class="btn-outline" target="_blank" rel="noopener noreferrer">https://tvarkarasciai.ku.lt/resources</a>
                 </div>
                 <p>arba susisiekus su už transportą atsakingu šio skyriaus darbuotoju.</p>
                 <p>Užpildytą autotransporto tvarkaraštį kontroliuoja Infrastruktūros valdymo ir investicijų skyriaus atsakingas darbuotojas. <strong>Pateikdami prašymą, kartu nurodykite kelionės programą ir vykstančiųjų sąrašą.</strong></p>
@@ -658,10 +729,10 @@
                 <h2 class="section-title white">Pagrindiniai kontaktai</h2>
                 <p class="white-text">Visus universiteto kontaktus rasite čia:</p>
                 <div class="btn-row">
-                    <a href="https://www.ku.lt/kontaktai" class="btn-pill" target="_blank" rel="noopener">www.ku.lt/kontaktai</a>
+                    <a href="https://www.ku.lt/kontaktai" class="btn-pill" target="_blank" rel="noopener noreferrer">www.ku.lt/kontaktai</a>
                 </div>
 
-                <p class="white-text" style="margin-top: 2rem;">Klaipėdos universitetas siekia kurti draugišką ir palaikančią aplinką darbuotojams, todėl kviečiame susipažinti su universitete teikiamomis paslaugomis:</p>
+                <p class="white-text services-intro">Klaipėdos universitetas siekia kurti draugišką ir palaikančią aplinką darbuotojams, todėl kviečiame susipažinti su universitete teikiamomis paslaugomis:</p>
 
                 <div class="services-grid">
                     <div class="service-card">
@@ -695,53 +766,78 @@
                 <p>Klaipėdos universiteto darbuotojų profesinė sąjunga (KUDPS), vadovaudamasi Lietuvos švietimo ir mokslo šakos kolektyvine sutartimi, KUDPS įstatais ir protokoliniais nutarimais, savo nariams suteikia šias garantijas ir naudas:</p>
 
                 <div class="benefits-grid">
-                    <div class="benefit-category">
-                        <h3>Atostogos ir poilsis</h3>
-                        <ul class="benefits-list">
-                            <li><strong>3 papildomos apmokamos</strong> kasmetinių atostogų dienos per metus. Šios dienos suteikiamos suderinus su darbdaviu (pildoma DVS) ir turi būti panaudotos per kalendorinius metus.</li>
-                            <li>Iki <strong>5 darbo dienų</strong> per metus sveikatai gerinti, mokant vidutinį darbo užmokestį.</li>
-                            <li>Iki <strong>3 darbo dienų</strong> per metus savišvietai ir savanorystei, paliekant vidutinį darbo užmokestį.</li>
-                        </ul>
-                    </div>
+                    <details class="accordion-block" open>
+                        <summary class="accordion-title">
+                            Atostogos ir poilsis
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <ul class="benefits-list">
+                                <li><strong>3 papildomos apmokamos</strong> kasmetinių atostogų dienos per metus. Šios dienos suteikiamos suderinus su darbdaviu (pildoma DVS) ir turi būti panaudotos per kalendorinius metus.</li>
+                                <li>Iki <strong>5 darbo dienų</strong> per metus sveikatai gerinti, mokant vidutinį darbo užmokestį.</li>
+                                <li>Iki <strong>3 darbo dienų</strong> per metus savišvietai ir savanorystei, paliekant vidutinį darbo užmokestį.</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                    <div class="benefit-category">
-                        <h3>Mokymasis ir kvalifikacijos kėlimas</h3>
-                        <ul class="benefits-list">
-                            <li><strong>Mokymosi atostogos:</strong>
-                                <ul>
-                                    <li>iki 10 darbo dienų per metus, mokant vidutinį darbo užmokestį, arba</li>
-                                    <li>iki 20 darbo dienų per metus, mokant 50% vidutinio darbo užmokesčio.</li>
-                                </ul>
-                            </li>
-                            <li>Galimybė kartą per metus kreiptis dėl kvalifikacijos kėlimo išlaidų kompensavimo (<strong>iki 100 Eur</strong>).</li>
-                        </ul>
-                    </div>
+                    <details class="accordion-block" open>
+                        <summary class="accordion-title">
+                            Mokymasis ir kvalifikacijos kėlimas
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <ul class="benefits-list">
+                                <li><strong>Mokymosi atostogos:</strong>
+                                    <ul>
+                                        <li>iki 10 darbo dienų per metus, mokant vidutinį darbo užmokestį, arba</li>
+                                        <li>iki 20 darbo dienų per metus, mokant 50% vidutinio darbo užmokesčio.</li>
+                                    </ul>
+                                </li>
+                                <li>Galimybė kartą per metus kreiptis dėl kvalifikacijos kėlimo išlaidų kompensavimo (<strong>iki 100 Eur</strong>).</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                    <div class="benefit-category">
-                        <h3>Dalyvavimas profesinės sąjungos veikloje</h3>
-                        <ul class="benefits-list">
-                            <li>Galimybė dalyvauti profesinių sąjungų organizuojamuose seminaruose, konferencijose ir mokymuose, suteikiant <strong>3 darbo dienas</strong> per metus.</li>
-                            <li>Profesinių sąjungų atstovaujamųjų ir valdymo organų nariams suteikiama iki <strong>72 darbo valandų</strong> per metus.</li>
-                        </ul>
-                    </div>
+                    <details class="accordion-block" open>
+                        <summary class="accordion-title">
+                            Dalyvavimas profesinės sąjungos veikloje
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <ul class="benefits-list">
+                                <li>Galimybė dalyvauti profesinių sąjungų organizuojamuose seminaruose, konferencijose ir mokymuose, suteikiant <strong>3 darbo dienas</strong> per metus.</li>
+                                <li>Profesinių sąjungų atstovaujamųjų ir valdymo organų nariams suteikiama iki <strong>72 darbo valandų</strong> per metus.</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                    <div class="benefit-category">
-                        <h3>Socialinė parama ir bendruomenė</h3>
-                        <ul class="benefits-list">
-                            <li>Vienkartinės išmokos mirus šeimos nariui.</li>
-                            <li>Vienkartinės išmokos ilgalaikės darbuotojo ar šeimos nario ligos atveju.</li>
-                            <li>Išmokos ir sveikinimai jubiliejų, vestuvių, vaiko gimimo proga.</li>
-                            <li>KUDPS nariai kviečiami dalyvauti ekskursijose, išvykose, edukacijose ir kituose renginiuose.</li>
-                        </ul>
-                    </div>
+                    <details class="accordion-block" open>
+                        <summary class="accordion-title">
+                            Socialinė parama ir bendruomenė
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <ul class="benefits-list">
+                                <li>Vienkartinės išmokos mirus šeimos nariui.</li>
+                                <li>Vienkartinės išmokos ilgalaikės darbuotojo ar šeimos nario ligos atveju.</li>
+                                <li>Išmokos ir sveikinimai jubiliejų, vestuvių, vaiko gimimo proga.</li>
+                                <li>KUDPS nariai kviečiami dalyvauti ekskursijose, išvykose, edukacijose ir kituose renginiuose.</li>
+                            </ul>
+                        </div>
+                    </details>
 
-                    <div class="benefit-category">
-                        <h3>Darbo vietos garantijos</h3>
-                        <ul class="benefits-list">
-                            <li>Profesinės sąjungos valdymo organų nariai <strong>negali būti atleisti</strong> darbdavio iniciatyva be išankstinio profesinės sąjungos sutikimo.</li>
-                            <li>Darbdavys, prašydamas tokio sutikimo, privalo pateikti visą su sprendimu susijusią informaciją.</li>
-                        </ul>
-                    </div>
+                    <details class="accordion-block" open>
+                        <summary class="accordion-title">
+                            Darbo vietos garantijos
+                            <span class="accordion-icon" aria-hidden="true"></span>
+                        </summary>
+                        <div class="accordion-content">
+                            <ul class="benefits-list">
+                                <li>Profesinės sąjungos valdymo organų nariai <strong>negali būti atleisti</strong> darbdavio iniciatyva be išankstinio profesinės sąjungos sutikimo.</li>
+                                <li>Darbdavys, prašydamas tokio sutikimo, privalo pateikti visą su sprendimu susijusią informaciją.</li>
+                            </ul>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
@@ -828,6 +924,13 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Back to Top -->
+        <button class="back-to-top" id="backToTop" aria-label="Grįžti į viršų">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 16V4M10 4L4 10M10 4L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </main>
 
     <script src="js/main.js"></script>
